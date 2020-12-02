@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+html, body {
+  min-height: 100%;
+}
+
+
+/* TYPE DEFAULTS */
+body {
+  font: 300 1em/1 'Roboto', helvetica, arial, sans-serif;
+  background-image: linear-gradient(#eee, #bbb);
+  color: #111;
+  padding: 1em;
+}
+
+/* UTILITY CLASSES */
+.inline-list {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.86em; 
+}
+.btn {
+  display: block;
+  background-color: slateblue;
+  color: white;
+  padding: 0.5em;
+  font-size: 1.25em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.8);
+}
+.btn:hover {
+  text-shadow: none;
+}
+.contact {
+  padding: 1em;
+}
+.room {
+  flex-grow: 1;
+  text-align: center;
+}
+.room:first-child {
+  flex-grow: 0;
+}
+
+/* SPECIFIC CLASSES */
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 1em rgba(0,0,0,0.2);
+  width: auto;
+  max-width: 40em;
+  margin: 1em auto;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.property-group {
+  padding: 1em;
+  border-bottom: 2px solid #eee;
+}
+.property-group:last-child {
+  border-bottom: none;
+}
+.room-icon {
+  height: 2em;
+  margin-right: 0.5em;
+}
+.address {
+  font-weight: 300;
+  font-size: 1em; 
+}
+.cost {
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+.cost::before {
+  content: "$";
+}
+.features {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.76em;
+}
+.features > li:not(:last-child)::after {
+  content: "\2219";
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.realtor-heading{
+  text-align: center;
+}
+.realtor {
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+}
+.realtor-face {
+  background-color: lightcoral;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  overflow: hidden;
+  /* margin-right: 1em; */
+  margin: 0 auto;
+}
+.realtor-name {
+  font-weight: 700;
+}
+.realtor-num a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 404px) {
+  .features, .inline-list {
+    font-size: 1em;
+  }
+
+  .realtor-heading{
+    text-align: left;
+  }
+
+  .realtor {
+    display: flex;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .realtor-face{
+    width: 3em;
+    height: 3em;
+    margin: 0 1em 0 0;
+  }
+  /* .card {
+    width: 90%;
+  } */
+}
+
+@media screen and (min-width: 1366px) {
+  body{
+    font-size: 1.2em;
+  } 
+  .card {
+    max-width: 36em;
+  }
+}
+
+
+
+
+/* 
+LAB 1:
+- Using device mode, evaluate the 320px case (smallest), make adjustments as needed
+- Scele up the size slowly to determine where the first breakpoint should go - adjust my default
+- Make the necessary adjustments to make this look pretty
+- Continue to scale up and determine one more breakpoint for this layout
+- Again, necessary adjustments
+LAB 2 (can be done after class):
+- Take a look at 3 news website and evaluate two pages (article, index/list)
+
+- New York times / https://www.nytimes.com : Major Break point is at 740px, lower than which it shifts to a more vertical layout.
+  Ads are same in both layouts since they span an entire row
+  A row where it show more articles actually gets cut off in smaller views and there is no horizontal scrolling for that part.
+  They print a Now Hiring thing on their console.
+  In article page the content is usually centred which is nice for a wide screen.
+  Heading changes from on top of the article image to below it when we reduce screen size.
+
+
+- www.cbc.ca : Similar to previous site. More news cards at the bottom change from 4 to 3 to 2 to 1 in  a row based on screen size.
+  That aspect is better than the above site.
+  On the article they have annoying sticky ads which scroll with you. The second one even hid comments on a smaller screen.
+  Disappering ad on the top in smaller screens
+
+
+- /www.theverge.com/ - Shifts everything into its own rows at <699px
+Using Heroic font for headings which is a narrower font. Already the design is such that not much stuff needs to be arranged.
+Each article is a new row.
+In the article page, they have autoplaying videos which is annoying which reminded me to turn off the setting in the browser.
+Ads get shifted to bottom from the side so article column space increases.
+*/
