@@ -22,3 +22,19 @@ In the article page, they have autoplaying videos which is annoying which remind
 Ads get shifted to bottom from the side so article column space increases.
 
 
+
+
+
+---
+
+## GitHub links to previous labs and assignments.
+
+### About Me:
+* [Github Repository](https://github.com/Anirudh887/About-Me)
+* [Github Page](https://anirudh887.github.io/About-Me/)
+
+### Card (my version):
+* [Github Repository](https://github.com/Anirudh887/lab-prop-card)
+* [Github Page](https://anirudh887.github.io/lab-prop-card/)
+
+
